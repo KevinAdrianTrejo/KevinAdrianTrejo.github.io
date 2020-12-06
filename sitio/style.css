@@ -30,6 +30,11 @@
 body{
   margin:0;
   font-family: 'Source Sans Pro', sans-serif;
+  background-image: url("../sitio/images/halo2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: 'Fjalla One',sans-serif;
@@ -77,17 +82,25 @@ figure{
   height: inherit;
 }
 .menu ul{
-  height: inherit;
   margin: 0;
   padding: 0;
   display: flex;
   list-style: none;
 }
-.menu ul li{
+.menu li{
   margin: 0 20px;
   height: inherit;
   display: flex;
   align-items: center;
+}
+.menu a{
+  margin: 10px;
+  border: 1px solid;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #026fff;
+  border-radius: 5px;
+  background-color: black;
 }
 .header{
   display: flex;
@@ -138,6 +151,7 @@ figure{
   position: relative;
   padding: 20px;
   text-align: center;
+  border-radius: 5px;
 }
 .event p{
   text-align: left;
@@ -149,6 +163,7 @@ figure{
   text-decoration: none;
   color: #026fff;
   border-radius: 5px;
+  background-color: black;
 }
 .footer a{
   color: white;
@@ -181,4 +196,90 @@ figure{
   left: 5px;
   top: 5px;
   color: white;
+}
+
+@media screen and (max-width: 1024px){
+  .container{
+    padding: 0 1.2em;
+  }
+  .event-title{
+    margin: 15px;
+  }
+  .event-detail h3{
+    font.size: 20px;
+  }
+  .event-detail p{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .burger-button{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+    background-color: #444b52c5;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: -100vw;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+  .menu.is-active{
+    left: 0;
+  }
+  .header{
+    display: block;
+    height: auto;
+  }
+  .header ul{
+    display: initial;
+  }
+  .header ul li{
+    height: 50px;
+    justify-content: center;
+
+  }
+  .header a{
+    justify-content: center;
+    height: 40px;
+    font-size: 1.5em;
+    text-decoration: center;
+    margin-bottom: .5em;
+  }
+  .event{
+    width: auto;
+    flex-shrink: initial;
+  }
+  .event img{
+    width: 100%;
+  }
+  .header .logo{
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 424px){
+  .event-detail h3{
+    font-size: 16px;
+  }
+  .event-detail p{
+    font-size: 14px;
+  }
+  .menu{
+    width: 90vw;
+  }
+  .event a{
+    padding: 5px 60px;
+  }
+  .footer{
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
 }
