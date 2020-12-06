@@ -214,6 +214,13 @@ figure{
 }
 
 @media screen and (max-width: 768px){
+  body{
+    background-image: url("../sitio/images/halo6.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
   .burger-button{
     display: block;
   }
@@ -265,6 +272,13 @@ figure{
 }
 
 @media screen and (max-width: 424px){
+  body{
+    background-image: url("../sitio/images/halo6.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
   .event-detail h3{
     font-size: 16px;
   }
